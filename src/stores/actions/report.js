@@ -1,11 +1,11 @@
 import { createActions } from 'redux-actions'
 
 export const REPORT_ACTIONS = createActions({
-    updateArea: (area) => {
+    selectArea: (area) => {
         return { area }
     },
-    toggleQuerying: (querying) => {
-        return { querying }
+    toggleLoading: (loading) => {
+        return { loading }
     },
     query: () => {
         return {}

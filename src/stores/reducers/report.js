@@ -2,18 +2,18 @@ import { handleActions } from 'redux-actions'
 import { Record } from 'immutable'
 
 export const INIT_REPORT_STATE = Record({
-    area: [],
+    area: '',
 
-    querying: false
+    loading: false
 })()
 
 export default handleActions({
 
-    ['report/updateArea']: (state, action) => {
+    ['report/selectArea']: (state, action) => {
         return state.set('area', action.payload.area)
     },
-    ['report/toggleQuerying']: (state, action) => {
-        return state.set('querying', action.payload.querying)
+    ['report/toggleLoading']: (state, action) => {
+        return state.set('loading', action.payload.loading)
     }
 
 }, INIT_REPORT_STATE)
