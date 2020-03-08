@@ -22,14 +22,14 @@ function* handleQuery() {
         }
 
         const result = yield call(query, { area })
-        if (result.code === 0 && result.data) {
-            const { xAxis, normal, abnormal } = result.data
+        if (result) {
+            const { xAxis, normal, abnormal } = result
 
             message.info('查询成功')
             yield put(REPORT_ACTIONS.toggleLoading(false))
             yield put(REPORT_ACTIONS.setChartData(xAxis, normal, abnormal))
         } else {
-            throw new Error(result.message || '查询失败，请稍候重试')
+            throw new Error('查询失败，请稍候重试')
         }
 
     } catch (e) {

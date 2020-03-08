@@ -1,16 +1,18 @@
-export async function query(form) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve(MOCK_RESULT)
-        }, 2000)
-    })
+import axios from './axios'
 
-    // return new Promise((resolve, reject) => {
-    //     $.getJSON('http://www.baidu.com/index.php?tn=myie2dg&ch=5', {}, function (data) {
-    //         console.log(data)
-    //         resolve(data)
-    //     })
+/**
+ * 查询报表数据
+ * @param form
+ * @returns {Promise<unknown>}
+ */
+export async function query(form) {
+    // return new Promise(resolve => {
+    //     setTimeout(() => {
+    //         resolve(MOCK_RESULT)
+    //     }, 2000)
     // })
+
+    return axios.post('/proxy/api/epidemic/query', form)
 }
 
 const MOCK_RESULT = {
