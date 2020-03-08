@@ -4,15 +4,15 @@ export const cityOptions = [
         label: '全国',
         children: [
             {
-                value: '1',
+                value: '001',
                 label: '浙江',
                 children: [
                     {
-                        value: '11',
+                        value: '001001',
                         label: '杭州',
                         children: [
                             {
-                                value: '111',
+                                value: '001001001',
                                 label: '西湖区',
                             },
                         ],
@@ -20,19 +20,19 @@ export const cityOptions = [
                 ]
             },
             {
-                value: '2',
+                value: '002',
                 label: '四川',
                 children: [
                     {
-                        value: '21',
+                        value: '002001',
                         label: '成都',
                         children: [
                             {
-                                value: '211',
+                                value: '002001001',
                                 label: '武侯区',
                             },
                             {
-                                value: '212',
+                                value: '002001002',
                                 label: '双流区',
                             }
                         ],
@@ -40,23 +40,23 @@ export const cityOptions = [
                 ],
             },
             {
-                value: '3',
+                value: '003',
                 label: '陕西',
                 children: [
                     {
-                        value: '31',
+                        value: '003001',
                         label: '西安',
                         children: [
                             {
-                                value: '311',
+                                value: '003001001',
                                 label: '碑林区',
                             },
                             {
-                                value: '312',
+                                value: '003001002',
                                 label: '长安区',
                             },
                             {
-                                value: '313',
+                                value: '003001003',
                                 label: '灞桥区'
                             }
                         ]
