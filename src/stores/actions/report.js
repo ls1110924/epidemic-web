@@ -9,5 +9,8 @@ export const REPORT_ACTIONS = createActions({
     },
     query: () => {
         return {}
+    },
+    setChartData: (xAxis, normal, abnormal) => {
+        return { xAxis, normal, abnormal }
     }
 }, { prefix: 'report' })
